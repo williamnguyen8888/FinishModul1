@@ -1,0 +1,29 @@
+<html>
+<head>
+
+</head>
+<body>
+<script>
+    let num = prompt("mời nhập số cần kiểm tra")
+    let arr = [];
+    let numberFlag = parseInt(num)
+    function  isFibonacci(numberInput){
+        var a = 1, b = 0, temp;
+        while (numberInput >= 0){
+            temp = a;
+            a = a + b;
+            b = temp;
+            numberInput--;
+            arr.push(b)
+        };
+        for (var i = 0; i < arr.length; i++){
+            if (numberFlag == arr[i]){
+                document.write("số " +numberFlag+ " có nằm trong dẫy số fibonaci")
+                return
+            }
+        };
+    }
+    isFibonacci(parseInt(num))
+</script>
+</body>
+</html>
